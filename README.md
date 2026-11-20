@@ -28,6 +28,8 @@ Open a new session and select the `video-editor` skill. These instructions insta
 
 ## Example requests
 
+[Full guide](GUIDE.md) · [Fictional editing dialogues](EXAMPLES.md)
+
 - Review this interview and tell me which sections to keep, trim, or reshoot.
 - Plan a 45-second vertical cut. Give me source in/out timecodes and caption cues.
 - Export the approved cut locally at 1080 × 1920. Preserve the original clips.

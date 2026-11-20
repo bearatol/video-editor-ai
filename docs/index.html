@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Video Editor AI — видеомонтажёр для Claude Code и Codex</title>
 <meta name="description" content="Видеоредактор для Claude Code и Codex. Разбор исходников, план монтажа с таймкодами, субтитры и локальный экспорт через FFmpeg.">
 <meta property="og:title" content="Video Editor AI — видеомонтажёр для Claude Code и Codex">
@@ -14,14 +14,15 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="wrap top"><a class="brand" href="./">Video Editor<span> AI</span></a><nav aria-label="Основное меню"><a href="#install">Установка</a><a href="https://github.com/bearatol/video-editor-ai">GitHub ↗</a></nav></header>
-<main class="wrap">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="wrap top"><a class="brand" href="./">Video Editor<span aria-hidden="true">✳</span> AI</a><nav aria-label="Основное меню"><a href="#dialogue">Пример</a><a href="#install">Установка</a><a href="https://github.com/bearatol/video-editor-ai">GitHub ↗</a></nav></header>
+<main id="main" class="wrap">
   <section class="hero" aria-labelledby="title">
     <div>
       <p class="eyebrow">Для Claude Code и Codex</p>
-      <h1 id="title">Видеомонтажёр<br>для твоих исходников.</h1>
+      <h1 id="title">Видеомонтажёр<br><em>для твоих исходников.</em></h1>
       <p class="lead">Пришли запись и расскажи, каким должен быть ролик. Получи разбор, монтажный план с таймкодами и, если доступен FFmpeg, готовый файл на своём компьютере.</p>
-      <div class="actions"><a class="primary" href="#install">Установить плагин</a><a href="#example">Посмотреть пример ↓</a></div>
+      <div class="actions"><a class="primary" href="#install">Установить плагин</a><a href="#dialogue">Посмотреть пример ↓</a></div>
     </div>
     <figure id="example" class="cut">
       <figcaption><strong>План монтажа</strong><span>Пример · Интервью</span></figcaption>
@@ -36,6 +37,24 @@
     <article><h2>Разбор съёмки</h2><p>Разбери звук, свет, кадр и подачу. Узнай, что исправить монтажом и какой фрагмент стоит переснять.</p></article>
     <article><h2>Монтаж и субтитры</h2><p>Разложи ролик по исходным таймкодам. Согласуй правки, перебивки и подписи перед экспортом.</p></article>
     <article><h2>Локальный экспорт</h2><p>Навык использует FFmpeg и ffprobe при наличии доступа. Он может установить FFmpeg через поддерживаемый менеджер пакетов по прямому запросу.</p></article>
+  </section>
+  <section class="stories" id="dialogue" aria-labelledby="dialogue-title">
+    <div class="stories-intro">
+      <p class="eyebrow">Пример работы</p>
+      <h2 id="dialogue-title">Оставь паузу. Верни реплику.</h2>
+      <p>Пришли клипы или проект и укажи, для кого ролик, где он выйдет, какой длительности и в каком формате. Отметь реплики, которые важно сохранить.</p>
+      <p>По отдельным кадрам или расшифровке разбор будет частичным. Для оценки звука и движения нужны соответствующие исходники.</p>
+      <a href="https://github.com/bearatol/video-editor-ai/blob/main/GUIDE.md#примеры-запросов">Другие примеры запросов ↗</a>
+    </div>
+    <details class="skill-example" open><summary><span class="example-heading"><small>Video Editor</small>Оставь паузу. Верни реплику.</span><span class="example-plus" aria-hidden="true">+</span></summary><div class="conversation">
+<div class="memo-top">Вымышленный пример · Выбери: <code>video-editor-ai:video-editor</code></div>
+<div class="message user"><span class="speaker">Ты</span><p>Сделай из записи салона вертикальный ролик на 20 секунд. Вырежи паузы.</p></div>
+<div class="message ceo"><span class="speaker">Video Editor</span><p>Пауза на 00:07 после «Я только чуть-чуть подровняю» готовит зрителя к результату. Я бы её оставил, сократил вступление и показал короткое превью с субтитрами.</p></div>
+<div class="message user"><span class="speaker">Ты</span><p>Оставь паузу. Верни реплику с 00:12, которую вырезали. Субтитры оставь на том же месте.</p></div>
+<div class="message ceo"><span class="speaker">Video Editor</span><p>Верну реплику в новой версии, сохраню расположение субтитров и заново проверю синхронизацию перед экспортом.</p></div>
+<div class="memo-result"><span aria-hidden="true">↳</span><strong>Сравни правки перед финальным экспортом.</strong></div>
+<p class="memo-caption"><a href="https://github.com/bearatol/video-editor-ai/blob/main/EXAMPLES.md#русский">Читать полный диалог ↗</a></p>
+</div></details>
   </section>
   <section id="install" class="install">
     <div><p class="eyebrow">Установка с GitHub</p><h2>Подключи Video Editor AI</h2><p>Установи плагин, открой новый разговор и выбери навык <code>video-editor</code>.</p><p class="prompt">«Разбери это интервью и предложи вертикальный монтаж на 45 секунд. Для каждой склейки укажи таймкод исходника».</p></div>
