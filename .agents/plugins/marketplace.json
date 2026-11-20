@@ -1,0 +1,20 @@
+{
+  "name": "video-editor-ai-plugins",
+  "interface": {
+    "displayName": "Video Editor AI"
+  },
+  "plugins": [
+    {
+      "name": "video-editor-ai",
+      "source": {
+        "source": "local",
+        "path": "./plugins/video-editor-ai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

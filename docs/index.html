@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Video Editor AI — видеомонтажёр для Claude Code и Codex</title>
+<meta name="description" content="Видеоредактор для Claude Code и Codex. Разбор исходников, план монтажа с таймкодами, субтитры и локальный экспорт через FFmpeg.">
+<meta property="og:title" content="Video Editor AI — видеомонтажёр для Claude Code и Codex">
+<meta property="og:description" content="Разбор исходников, план монтажа с таймкодами и локальный экспорт.">
+<meta property="og:url" content="https://bearatol.github.io/video-editor-ai/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bearatol.github.io/video-editor-ai/">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap top"><a class="brand" href="./">Video Editor<span> AI</span></a><nav aria-label="Основное меню"><a href="#install">Установка</a><a href="https://github.com/bearatol/video-editor-ai">GitHub ↗</a></nav></header>
+<main class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div>
+      <p class="eyebrow">Для Claude Code и Codex</p>
+      <h1 id="title">Видеомонтажёр<br>для твоих исходников.</h1>
+      <p class="lead">Пришли запись и расскажи, каким должен быть ролик. Получи разбор, монтажный план с таймкодами и, если доступен FFmpeg, готовый файл на своём компьютере.</p>
+      <div class="actions"><a class="primary" href="#install">Установить плагин</a><a href="#example">Посмотреть пример ↓</a></div>
+    </div>
+    <figure id="example" class="cut">
+      <figcaption><strong>План монтажа</strong><span>Пример · Интервью</span></figcaption>
+      <ol>
+        <li><time>00:00–00:07</time><div><strong>Убрать вступление</strong><span>Начать сразу с главной мысли.</span></div></li>
+        <li><time>00:07–00:19</time><div><strong>Оставить ответ и паузу</strong><span>Пауза даёт зрителю время понять реплику.</span></div></li>
+        <li><time>00:19–00:28</time><div><strong>Добавить перебивку</strong><span>Показать пример поверх речи.</span></div></li>
+      </ol>
+    </figure>
+  </section>
+  <section class="features" aria-label="Возможности">
+    <article><h2>Разбор съёмки</h2><p>Разбери звук, свет, кадр и подачу. Узнай, что исправить монтажом и какой фрагмент стоит переснять.</p></article>
+    <article><h2>Монтаж и субтитры</h2><p>Разложи ролик по исходным таймкодам. Согласуй правки, перебивки и подписи перед экспортом.</p></article>
+    <article><h2>Локальный экспорт</h2><p>Навык использует FFmpeg и ffprobe при наличии доступа. Он может установить FFmpeg через поддерживаемый менеджер пакетов по прямому запросу.</p></article>
+  </section>
+  <section id="install" class="install">
+    <div><p class="eyebrow">Установка с GitHub</p><h2>Подключи Video Editor AI</h2><p>Установи плагин, открой новый разговор и выбери навык <code>video-editor</code>.</p><p class="prompt">«Разбери это интервью и предложи вертикальный монтаж на 45 секунд. Для каждой склейки укажи таймкод исходника».</p></div>
+    <div class="commands">
+      <h3>Claude Code</h3><pre><code>/plugin marketplace add bearatol/video-editor-ai
+/plugin install video-editor-ai@video-editor-ai-plugins</code></pre>
+      <h3>Codex CLI</h3><pre><code>codex plugin marketplace add bearatol/video-editor-ai --ref main
+codex plugin add video-editor-ai@video-editor-ai-plugins</code></pre>
+    </div>
+  </section>
+  <section id="privacy" class="privacy">
+    <h2>Данные и приватность</h2>
+    <p>Сайт статический. У нас нет форм, аналитики или cookies, которые ставит страница. GitHub обслуживает сайт и обрабатывает технические данные посетителей по своей политике.</p>
+    <p>Навык выполняет работу средствами Claude Code или Codex. Для локального экспорта он обрабатывает файлы в среде, где запущен, и не отправляет их на отдельный сервер рендера. При разрешённой установке FFmpeg менеджер пакетов обращается к своему репозиторию. Данные чата обрабатывает выбранное AI-приложение.</p>
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Политика GitHub ↗</a>
+  </section>
+</main>
+<footer class="wrap bottom"><span>Video Editor AI · MIT</span><a href="https://github.com/bearatol/video-editor-ai/issues">Сообщить о проблеме ↗</a></footer>
+</body>
+</html>

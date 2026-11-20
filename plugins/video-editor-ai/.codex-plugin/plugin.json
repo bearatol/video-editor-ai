@@ -1,0 +1,23 @@
+{
+  "name": "video-editor-ai",
+  "version": "0.1.0",
+  "description": "Review footage, plan timecoded cuts, refine captions, and export local edits with FFmpeg.",
+  "author": {
+    "name": "Mikhail Diesperov"
+  },
+  "homepage": "https://bearatol.github.io/video-editor-ai/",
+  "repository": "https://github.com/bearatol/video-editor-ai",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Video Editor AI",
+    "shortDescription": "Review footage and plan local video edits.",
+    "developerName": "Mikhail Diesperov",
+    "category": "Productivity",
+    "websiteURL": "https://bearatol.github.io/video-editor-ai/",
+    "brandColor": "#7968F2",
+    "defaultPrompt": [
+      "Review this footage and give me a cut plan with source timecodes."
+    ]
+  }
+}

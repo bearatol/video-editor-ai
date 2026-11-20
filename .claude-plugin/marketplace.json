@@ -1,0 +1,16 @@
+{
+  "name": "video-editor-ai-plugins",
+  "owner": {
+    "name": "Mikhail Diesperov"
+  },
+  "plugins": [
+    {
+      "name": "video-editor-ai",
+      "source": "./plugins/video-editor-ai",
+      "description": "Review footage, plan timecoded cuts, refine captions, and export local edits with FFmpeg."
+    }
+  ],
+  "metadata": {
+    "description": "Video Editor AI for footage review, cut planning and local export."
+  }
+}
