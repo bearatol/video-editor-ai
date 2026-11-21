@@ -17,7 +17,7 @@
 <meta property="og:title" content="AI video editing skill for Claude Code and Codex">
 <meta property="og:description" content="Edit video with Claude Code or Codex. Review footage, plan timecoded cuts for interviews and shorts, refine captions, and export locally with FFmpeg.">
 <meta property="og:url" content="https://bearatol.github.io/video-editor-ai/en/">
-<meta property="og:image" content="https://bearatol.github.io/video-editor-ai/assets/video-editor-ai.jpg">
+<meta property="og:image" content="https://bearatol.github.io/video-editor-ai/assets/video-editor-ai-diagram.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +41,11 @@
     </div>
     <div class="reel" id="example">
       <div class="brief"><strong>Request to the agent</strong><p>Make a vertical cut from this interview. Keep the pause before the key line.</p></div>
-      <div class="still"><img src="../assets/interview.webp" fetchpriority="high" width="1536" height="1024" alt="Fictional interview with a woman in a hair salon"><span>Example · Interview</span></div>
+      <figure class="timeline">
+        <figcaption>Editing diagram</figcaption>
+        <div class="track"><strong>Source</strong><div class="track-clips"><span class="removed">Intro</span><span>Pause and reply</span><span>Cutaway</span></div></div>
+        <div class="track"><strong>Edit</strong><div class="track-clips trimmed"><span>Pause and reply</span><span>Cutaway</span></div></div>
+      </figure>
       <figure class="edit"><figcaption><strong>Cut plan</strong><span>Source timecodes</span></figcaption><ol class="clips"><li><time>00:00–00:07</time>Trim the intro</li><li><time>00:07–00:19</time>Keep the pause and reply</li><li><time>00:19–00:28</time>Add a cutaway</li></ol></figure>
     </div>
   </section>

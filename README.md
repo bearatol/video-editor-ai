@@ -1,6 +1,6 @@
 # Video Editor AI
 
-![Video Editor AI banner](docs/assets/video-editor-ai.jpg)
+![Video Editor AI banner](docs/assets/video-editor-ai-diagram.jpg)
 
 An AI video editing skill for Claude Code and Codex. Review footage, decide what to reshoot, plan a cut with source timecodes, refine captions, and export locally with FFmpeg.
 

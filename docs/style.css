@@ -50,9 +50,33 @@ h1 span { display: block; color: var(--orange); }
 .brief { padding: 15px 20px; border-left: 3px solid var(--blue); }
 .brief strong { display: block; color: var(--blue); font: 700 .72rem/1.4 Golos, sans-serif; letter-spacing: .06em; margin-bottom: 3px; }
 .brief p { line-height: 1.35; }
-.still { position: relative; border-block: 1px solid var(--line); }
-.still img { aspect-ratio: 16/9; height: auto; object-fit: cover; object-position: center 38%; }
-.still span { position: absolute; bottom: 12px; left: 12px; background: #0a0d11ef; color: #fff; padding: 4px 9px; border-radius: 4px; font-size: .73rem; }
+.timeline {
+  padding: 18px clamp(12px, 2.5vw, 26px);
+  border-block: 1px solid var(--line);
+  background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), #26323b 10%) #10151b;
+}
+.timeline figcaption { margin-bottom: 12px; color: var(--muted); font-size: .82rem; }
+.track { display: grid; grid-template-columns: minmax(66px, 17%) minmax(0, 1fr); align-items: center; gap: 7px; }
+.track + .track { margin-top: 9px; }
+.track strong { font-size: .78rem; }
+.track-clips { display: grid; grid-template-columns: 7fr 12fr 9fr; gap: 4px; }
+.track-clips.trimmed { grid-template-columns: 12fr 9fr 7fr; }
+.track-clips span {
+  display: grid;
+  min-width: 0;
+  min-height: 47px;
+  padding: 6px;
+  align-content: center;
+  border: 1px solid #456271;
+  border-radius: 5px;
+  background: #202e37;
+  color: var(--blue);
+  font-size: clamp(.68rem, 1vw, .83rem);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.track-clips .removed { border-style: dashed; color: var(--muted); background: #141920; }
+.track-clips.trimmed span:first-child { border-color: var(--orange); color: var(--orange); }
 .edit { padding: 15px 18px 18px; }
 .edit figcaption { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: .8rem; gap: 10px; }
 .edit figcaption strong { color: var(--text); }

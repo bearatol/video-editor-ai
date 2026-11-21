@@ -17,7 +17,7 @@
 <meta property="og:title" content="适用于 Claude Code 和 Codex 的 AI 视频剪辑技能">
 <meta property="og:description" content="用 Claude Code 或 Codex 剪辑视频。检查拍摄素材，为访谈和短视频制定带时间码的剪辑方案，调整字幕，并通过 FFmpeg 在本地导出。">
 <meta property="og:url" content="https://bearatol.github.io/video-editor-ai/zh/">
-<meta property="og:image" content="https://bearatol.github.io/video-editor-ai/assets/video-editor-ai.jpg">
+<meta property="og:image" content="https://bearatol.github.io/video-editor-ai/assets/video-editor-ai-diagram.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -41,7 +41,11 @@
     </div>
     <div class="reel" id="example">
       <div class="brief"><strong>给智能体的任务</strong><p>把这段采访剪成竖屏短片，保留关键台词前的停顿。</p></div>
-      <div class="still"><img src="../assets/interview.webp" fetchpriority="high" width="1536" height="1024" alt="虚构采访示例：一位女性在美发沙龙接受采访"><span>剪辑示例 · 采访</span></div>
+      <figure class="timeline">
+        <figcaption>剪辑示意图</figcaption>
+        <div class="track"><strong>原始素材</strong><div class="track-clips"><span class="removed">开场</span><span>停顿和回答</span><span>补充镜头</span></div></div>
+        <div class="track"><strong>剪辑</strong><div class="track-clips trimmed"><span>停顿和回答</span><span>补充镜头</span></div></div>
+      </figure>
       <figure class="edit"><figcaption><strong>剪辑方案</strong><span>原片时间码</span></figcaption><ol class="clips"><li><time>00:00–00:07</time>删掉开场</li><li><time>00:07–00:19</time>保留停顿和回答</li><li><time>00:19–00:28</time>插入补充镜头</li></ol></figure>
     </div>
   </section>
