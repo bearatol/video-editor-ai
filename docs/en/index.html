@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<title>AI video editing skill for Claude Code and Codex | Video Editor AI</title>
+<meta name="description" content="Edit video with Claude Code or Codex. Review footage, plan timecoded cuts for interviews and shorts, refine captions, and export locally with FFmpeg.">
+<link rel="canonical" href="https://bearatol.github.io/video-editor-ai/en/">
+<link rel="alternate" hreflang="ru" href="https://bearatol.github.io/video-editor-ai/">
+<link rel="alternate" hreflang="en" href="https://bearatol.github.io/video-editor-ai/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bearatol.github.io/video-editor-ai/zh/">
+<link rel="alternate" hreflang="x-default" href="https://bearatol.github.io/video-editor-ai/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Video Editor AI">
+<meta property="og:title" content="AI video editing skill for Claude Code and Codex">
+<meta property="og:description" content="Edit video with Claude Code or Codex. Review footage, plan timecoded cuts for interviews and shorts, refine captions, and export locally with FFmpeg.">
+<meta property="og:url" content="https://bearatol.github.io/video-editor-ai/en/">
+<meta property="og:image" content="https://bearatol.github.io/video-editor-ai/assets/video-editor-ai.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo.png" type="image/png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top wrap">
+  <a class="brand" href="./"><img src="../assets/logo.png" width="32" height="32" alt="">Video Editor AI</a>
+  <nav><a href="#dialogue">Example</a><a href="#install">Install</a><a href="https://github.com/bearatol/video-editor-ai">GitHub ↗</a></nav>
+  <nav class="languages" aria-label="Language"><a lang="ru" hreflang="ru" aria-label="Русский" href=".././">RU</a><a lang="en" hreflang="en" aria-label="English" aria-current="page" href="../en/">EN</a><a lang="zh-Hans" hreflang="zh-Hans" aria-label="简体中文" href="../zh/">简中</a></nav>
+</header>
+<main class="wrap" id="main">
+  <section class="hero" aria-labelledby="title">
+    <div>
+      <p class="kicker">A skill for Claude Code and Codex</p>
+      <h1 id="title">AI video editing<span>for your footage</span></h1>
+      <p class="lead">Give your agent a recording and an editing brief. Get feedback on what to keep or reshoot, a cut plan with source timecodes, and a local export when FFmpeg is available.</p>
+      <div class="actions"><a class="primary" href="#install">How to install</a><a href="#dialogue">See an editing example ↓</a></div>
+    </div>
+    <div class="reel" id="example">
+      <div class="brief"><strong>Request to the agent</strong><p>Make a vertical cut from this interview. Keep the pause before the key line.</p></div>
+      <div class="still"><img src="../assets/interview.webp" fetchpriority="high" width="1536" height="1024" alt="Fictional interview with a woman in a hair salon"><span>Example · Interview</span></div>
+      <figure class="edit"><figcaption><strong>Cut plan</strong><span>Source timecodes</span></figcaption><ol class="clips"><li><time>00:00–00:07</time>Trim the intro</li><li><time>00:07–00:19</time>Keep the pause and reply</li><li><time>00:19–00:28</time>Add a cutaway</li></ol></figure>
+    </div>
+  </section>
+  <section class="capabilities" aria-label="A skill for Claude Code and Codex"><article><h2>Footage review</h2><p>Check sound, framing, lighting, and delivery. Find out what you can fix in the edit and what is worth reshooting.</p></article><article><h2>Cuts and captions</h2><p>Agree on the order of lines, cutaways, and captions for interviews, short videos, Reels, and Shorts.</p></article><article><h2>Local export</h2><p>Render the approved cut with FFmpeg in a local session that can access your source files.</p></article></section>
+  <section id="dialogue" class="split" aria-labelledby="story">
+    <div class="section-intro"><p class="kicker">Fictional dialogue</p><h2 id="story">Keep the pause. Bring back that line.</h2><p>The agent explains why a pause works, then revises the next cut based on your feedback.</p><a href="https://github.com/bearatol/video-editor-ai/blob/main/EXAMPLES.md#english">More examples on GitHub ↗</a></div>
+    <div class="conversation"><div class="message"><strong>You</strong><p>Make a 20-second vertical video from this salon recording. Cut the pauses.</p></div><div class="message"><strong>Video Editor AI</strong><p>I would keep the pause at 00:07 after “I’m just taking a little off.” It sets up the joke. I’ll shorten the intro and propose a captioned preview.</p></div><div class="message"><strong>You</strong><p>Keep the pause. Bring back the line from 00:12. Leave the captions in the same position.</p></div><div class="message"><strong>Video Editor AI</strong><p>I’ll restore the line in a new cut, keep the captions in place, and check sync.</p></div></div>
+  </section>
+  <section id="install" class="split" aria-labelledby="installation">
+    <div class="section-intro"><h2 id="installation">Install Video Editor AI</h2><p>Choose an installation method. For export, use a local session with access to your clips and FFmpeg.</p><p>After installation, open a new session and select video-editor. The native Claude Code plugin provides /video-editor-ai:video-editor.</p></div>
+    <div class="methods"><details open><summary>In the app</summary><div><ol><li>Claude Code Desktop. If the plugin browser lets you add a source, enter bearatol/video-editor-ai. Otherwise use a text editor to add this key to the project’s .claude/settings.json, preserve any existing settings, and reopen the trusted local project.<pre><code>{
+  &quot;extraKnownMarketplaces&quot;: {
+    &quot;video-editor-ai-plugins&quot;: {
+      &quot;source&quot;: {
+        &quot;source&quot;: &quot;github&quot;,
+        &quot;repo&quot;: &quot;bearatol/video-editor-ai&quot;,
+        &quot;ref&quot;: &quot;v0.1.1&quot;
+      }
+    }
+  }
+}</code></pre><p>Next to the prompt box, select “+” → Add plugins, or Plugins → Browse plugins. Select the Video Editor AI source, then Video Editor AI → Install.</p></li><li>Codex Desktop. Clone the repository with GitHub Desktop and open that folder as a project. Restart the app, open Plugins, choose the Video Editor AI source, and install the plugin for the project. <a href="https://github.com/bearatol/video-editor-ai">GitHub</a>.</li><li>Claude in your browser. Download the skill ZIP, then open Customize → Skills → Create skill → Upload a skill. This adds the standalone skill. Local files and FFmpeg depend on the environment. <a href="../assets/video-editor-skill.zip" download>Download skill ZIP</a>.</li></ol></div></details>
+<details><summary>Ask your agent</summary><div><p>Paste into a local Claude Code or Codex session with access to the project and tools:</p><blockquote>Install Video Editor AI from https://github.com/bearatol/video-editor-ai for this project. Read the project’s official installation guide, use the method supported here, and verify that the video-editor skill is available. Ask me if the environment requires approval. Leave FFmpeg installation for a separate request.</blockquote></div></details>
+<details><summary>With APM</summary><div><p>With APM installed, run this from the project directory. APM installs the skill for both agents and records the version in apm.lock.yaml.</p><pre><code>apm install bearatol/video-editor-ai/plugins/video-editor-ai#v0.1.1 --target claude,codex</code></pre></div></details>
+<details><summary>With skills.sh</summary><div><p>With Node.js 22.20 or later, run this from your project directory and choose an agent in the installer.</p><pre><code>npx skills@1.9.0 add bearatol/video-editor-ai --skill video-editor</code></pre><a href="https://skills.sh/bearatol/video-editor-ai/video-editor">View on skills.sh</a></div></details>
+<details><summary>Native commands</summary><div><p>Claude Code</p><pre><code>/plugin marketplace add bearatol/video-editor-ai
+/plugin install video-editor-ai@video-editor-ai-plugins</code></pre><p>Codex CLI</p><pre><code>codex plugin marketplace add bearatol/video-editor-ai --ref main
+codex plugin add video-editor-ai@video-editor-ai-plugins</code></pre></div></details></div>
+  </section>
+  <section id="privacy" class="privacy"><h2>Data and privacy</h2><p>GitHub Pages hosts this static site. The page has no forms or analytics. Your chosen app handles session data.</p><p>Local export processes files in your agent’s environment without a separate rendering service. If you ask to install FFmpeg, a supported package manager contacts its package repository.</p></section>
+</main>
+<footer class="bottom wrap"><span>Video Editor AI · MIT</span><a href="https://github.com/bearatol/video-editor-ai/issues">Report an issue ↗</a></footer>
+</body>
+</html>

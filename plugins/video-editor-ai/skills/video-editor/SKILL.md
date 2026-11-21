@@ -1,6 +1,6 @@
 ---
 name: video-editor
-description: Review supplied footage, advise whether to reshoot, and edit videos, reels, shorts, interviews, or highlights. Use for feedback on sound, light, framing, or delivery, and for trimming, captions, and export with local FFmpeg. Also use for requests in Russian for a видеомонтажёр, видеоредактор or видеомонтаж.
+description: Review supplied footage, advise whether to reshoot, and edit videos, reels, shorts, interviews, or highlights. Use for feedback on sound, light, framing, or delivery, and for trimming, captions, and export with local FFmpeg. Also use for requests such as видеомонтажёр, видеоредактор, видеомонтаж, 视频剪辑, 视频编辑, or 剪辑视频.
 ---
 
 # Video Editor

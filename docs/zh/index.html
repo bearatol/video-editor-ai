@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<title>适用于 Claude Code 和 Codex 的 AI 视频剪辑技能 | Video Editor AI</title>
+<meta name="description" content="用 Claude Code 或 Codex 剪辑视频。检查拍摄素材，为访谈和短视频制定带时间码的剪辑方案，调整字幕，并通过 FFmpeg 在本地导出。">
+<link rel="canonical" href="https://bearatol.github.io/video-editor-ai/zh/">
+<link rel="alternate" hreflang="ru" href="https://bearatol.github.io/video-editor-ai/">
+<link rel="alternate" hreflang="en" href="https://bearatol.github.io/video-editor-ai/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bearatol.github.io/video-editor-ai/zh/">
+<link rel="alternate" hreflang="x-default" href="https://bearatol.github.io/video-editor-ai/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="Video Editor AI">
+<meta property="og:title" content="适用于 Claude Code 和 Codex 的 AI 视频剪辑技能">
+<meta property="og:description" content="用 Claude Code 或 Codex 剪辑视频。检查拍摄素材，为访谈和短视频制定带时间码的剪辑方案，调整字幕，并通过 FFmpeg 在本地导出。">
+<meta property="og:url" content="https://bearatol.github.io/video-editor-ai/zh/">
+<meta property="og:image" content="https://bearatol.github.io/video-editor-ai/assets/video-editor-ai.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo.png" type="image/png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="top wrap">
+  <a class="brand" href="./"><img src="../assets/logo.png" width="32" height="32" alt="">Video Editor AI</a>
+  <nav><a href="#dialogue">剪辑示例</a><a href="#install">安装</a><a href="https://github.com/bearatol/video-editor-ai">GitHub ↗</a></nav>
+  <nav class="languages" aria-label="语言"><a lang="ru" hreflang="ru" aria-label="Русский" href=".././">RU</a><a lang="en" hreflang="en" aria-label="English" href="../en/">EN</a><a lang="zh-Hans" hreflang="zh-Hans" aria-label="简体中文" aria-current="page" href="../zh/">简中</a></nav>
+</header>
+<main class="wrap" id="main">
+  <section class="hero" aria-labelledby="title">
+    <div>
+      <p class="kicker">Claude Code 和 Codex 的视频剪辑技能</p>
+      <h1 id="title">AI 视频剪辑<span>从你的素材开始</span></h1>
+      <p class="lead">把视频和剪辑要求交给智能体。它会说明哪些镜头值得保留或补拍，给出带原片时间码的剪辑方案，并在可以使用 FFmpeg 时导出成片。</p>
+      <div class="actions"><a class="primary" href="#install">查看安装方法</a><a href="#dialogue">看剪辑示例 ↓</a></div>
+    </div>
+    <div class="reel" id="example">
+      <div class="brief"><strong>给智能体的任务</strong><p>把这段采访剪成竖屏短片，保留关键台词前的停顿。</p></div>
+      <div class="still"><img src="../assets/interview.webp" fetchpriority="high" width="1536" height="1024" alt="虚构采访示例：一位女性在美发沙龙接受采访"><span>剪辑示例 · 采访</span></div>
+      <figure class="edit"><figcaption><strong>剪辑方案</strong><span>原片时间码</span></figcaption><ol class="clips"><li><time>00:00–00:07</time>删掉开场</li><li><time>00:07–00:19</time>保留停顿和回答</li><li><time>00:19–00:28</time>插入补充镜头</li></ol></figure>
+    </div>
+  </section>
+  <section class="capabilities" aria-label="Claude Code 和 Codex 的视频剪辑技能"><article><h2>检查拍摄素材</h2><p>检查声音、构图、灯光和表达，判断哪些问题能靠剪辑解决，哪些镜头值得补拍。</p></article><article><h2>剪辑与字幕</h2><p>为访谈、短视频、Reels 和 Shorts 确认台词顺序、补充镜头和字幕。</p></article><article><h2>本地导出</h2><p>在能访问原始素材的本地会话中，用 FFmpeg 导出确认后的版本。</p></article></section>
+  <section id="dialogue" class="split" aria-labelledby="story">
+    <div class="section-intro"><p class="kicker">虚构对话</p><h2 id="story">保留停顿，放回那句台词</h2><p>智能体先解释这个停顿为什么有效，再根据你的反馈调整下一版。</p><a href="https://github.com/bearatol/video-editor-ai/blob/main/EXAMPLES.md#简体中文">在 GitHub 查看更多示例 ↗</a></div>
+    <div class="conversation"><div class="message"><strong>你</strong><p>把这段美发沙龙的录像剪成 20 秒的竖屏短片，去掉停顿。</p></div><div class="message"><strong>Video Editor AI</strong><p>建议保留 00:07 处「我就稍微修一点」之后的停顿，它为笑点做了铺垫。我会缩短开场，并给你看带字幕的预览方案。</p></div><div class="message"><strong>你</strong><p>保留停顿，把 00:12 那句放回来。字幕位置保持原样。</p></div><div class="message"><strong>Video Editor AI</strong><p>我会在新版本里放回那句台词，保留字幕位置，并检查字幕同步。</p></div></div>
+  </section>
+  <section id="install" class="split" aria-labelledby="installation">
+    <div class="section-intro"><h2 id="installation">安装 Video Editor AI</h2><p>选择适合你的安装方式。导出成片时，请使用能够访问素材和 FFmpeg 的本地会话。</p><p>安装后开启新会话并选择 video-editor。Claude Code 原生插件提供 /video-editor-ai:video-editor 命令。</p></div>
+    <div class="methods"><details open><summary>在应用中安装</summary><div><ol><li>Claude Code 桌面版：如果插件浏览器支持添加来源，输入 bearatol/video-editor-ai。也可以用文本编辑器将以下设置合并到项目的 .claude/settings.json，保留原有设置，然后重新打开受信任的本地项目。<pre><code>{
+  &quot;extraKnownMarketplaces&quot;: {
+    &quot;video-editor-ai-plugins&quot;: {
+      &quot;source&quot;: {
+        &quot;source&quot;: &quot;github&quot;,
+        &quot;repo&quot;: &quot;bearatol/video-editor-ai&quot;,
+        &quot;ref&quot;: &quot;v0.1.1&quot;
+      }
+    }
+  }
+}</code></pre><p>点击输入框旁的「+」，选择 Add plugins，或 Plugins → Browse plugins。选择 Video Editor AI 来源，再选择 Video Editor AI → Install。</p></li><li>Codex 桌面版：使用 GitHub Desktop 克隆仓库，将该文件夹作为项目打开。重启应用，在 Plugins 中选择 Video Editor AI 来源，然后为该项目安装插件。 <a href="https://github.com/bearatol/video-editor-ai">GitHub</a>.</li><li>Claude 网页版：下载技能 ZIP，打开 Customize → Skills → Create skill → Upload a skill 并上传。这只会添加独立技能。能否访问本地文件和 FFmpeg 取决于会话环境。 <a href="../assets/video-editor-skill.zip" download>下载技能 ZIP</a>.</li></ol></div></details>
+<details><summary>让智能体安装</summary><div><p>将这段话发给能访问项目和使用工具的本地 Claude Code 或 Codex 会话：</p><blockquote>请为当前项目安装 https://github.com/bearatol/video-editor-ai 里的 Video Editor AI。先阅读项目的官方安装说明，再按当前环境支持的方式安装，并检查 video-editor 技能是否可用。如果环境需要批准，请先询问我。暂时不要安装 FFmpeg。</blockquote></div></details>
+<details><summary>通过 APM 安装</summary><div><p>已安装 APM 时，在项目目录运行以下命令。APM 会为两个智能体接入技能，并将版本记录在 apm.lock.yaml 中。</p><pre><code>apm install bearatol/video-editor-ai/plugins/video-editor-ai#v0.1.1 --target claude,codex</code></pre></div></details>
+<details><summary>通过 skills.sh 安装</summary><div><p>使用 Node.js 22.20 或更高版本，在项目目录运行命令，然后在安装向导中选择智能体。</p><pre><code>npx skills@1.9.0 add bearatol/video-editor-ai --skill video-editor</code></pre><a href="https://skills.sh/bearatol/video-editor-ai/video-editor">在 skills.sh 查看</a></div></details>
+<details><summary>原生插件命令</summary><div><p>Claude Code</p><pre><code>/plugin marketplace add bearatol/video-editor-ai
+/plugin install video-editor-ai@video-editor-ai-plugins</code></pre><p>Codex CLI</p><pre><code>codex plugin marketplace add bearatol/video-editor-ai --ref main
+codex plugin add video-editor-ai@video-editor-ai-plugins</code></pre></div></details></div>
+  </section>
+  <section id="privacy" class="privacy"><h2>数据与隐私</h2><p>这个静态网站由 GitHub Pages 托管，页面没有表单或分析脚本。会话数据由你选择的应用处理。</p><p>本地导出在智能体的运行环境中处理文件，无需单独的渲染服务。如果你要求安装 FFmpeg，受支持的包管理器会连接其软件仓库。</p></section>
+</main>
+<footer class="bottom wrap"><span>Video Editor AI · MIT</span><a href="https://github.com/bearatol/video-editor-ai/issues">报告问题 ↗</a></footer>
+</body>
+</html>

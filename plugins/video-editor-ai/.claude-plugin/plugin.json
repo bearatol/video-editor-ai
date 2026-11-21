@@ -1,6 +1,6 @@
 {
   "name": "video-editor-ai",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Review footage, plan timecoded cuts, refine captions, and export local edits with FFmpeg.",
   "author": {
     "name": "Mikhail Diesperov"
@@ -15,7 +15,10 @@
     "видеомонтаж",
     "видеомонтажёр",
     "видеомонтажер",
-    "видеоредактор"
+    "видеоредактор",
+    "AI video editing",
+    "视频剪辑",
+    "视频编辑"
   ],
   "privacyPolicyUrl": "https://bearatol.github.io/video-editor-ai/#privacy",
   "documentationUrl": "https://github.com/bearatol/video-editor-ai#install",
