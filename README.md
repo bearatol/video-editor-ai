@@ -1,5 +1,11 @@
 # Video Editor AI
 
+[![GitHub Pages](https://github.com/bearatol/video-editor-ai/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bearatol/video-editor-ai/actions/workflows/pages/pages-build-deployment)
+[![skills.sh](https://img.shields.io/badge/skills.sh-video--editor-black)](https://skills.sh/bearatol/video-editor-ai/video-editor)
+[![Gen Agent Trust Hub audit](https://img.shields.io/badge/Gen_Agent_Trust_Hub-audit-blue)](https://skills.sh/bearatol/video-editor-ai/video-editor/security/agent-trust-hub)
+[![Socket audit](https://img.shields.io/badge/Socket-audit-blue)](https://skills.sh/bearatol/video-editor-ai/video-editor/security/socket)
+[![Snyk audit](https://img.shields.io/badge/Snyk-audit-blue)](https://skills.sh/bearatol/video-editor-ai/video-editor/security/snyk)
+
 ![Video Editor AI banner](docs/assets/video-editor-ai-diagram.jpg)
 
 An AI video editing skill for Claude Code and Codex. Review footage, decide what to reshoot, plan a cut with source timecodes, refine captions, and export locally with FFmpeg.
